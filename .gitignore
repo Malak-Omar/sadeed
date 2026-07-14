@@ -1,3 +1,24 @@
+# Environment variables — never commit
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
 venv/
-node_modules/
+.venv/
+
+# Node
+frontend/node_modules/
 frontend/.vite/
+
+# Build output
+static/
+
+# Archives
+*.zip
+
+# macOS
+.DS_Store
