@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 antialiased;
+    background-color: #e8e8e8;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  [dir='rtl'] body,
+  [dir='rtl'] * {
+    font-family: 'Cairo', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-gray-200 rounded-2xl p-6 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3
+           rounded-xl transition-all duration-200 disabled:opacity-50
+           disabled:cursor-not-allowed focus:outline-none focus:ring-2
+           focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-50;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-700 font-medium px-5 py-2.5
+           rounded-xl border border-gray-300 transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-sm;
+  }
+
+  .input-field {
+    @apply bg-white border border-gray-300 text-gray-900 rounded-xl px-4 py-3
+           placeholder-gray-400 focus:outline-none focus:ring-2
+           focus:ring-blue-500 focus:border-transparent transition w-full shadow-sm;
+  }
+
+  .pill-green {
+    @apply bg-emerald-50 text-emerald-700 border border-emerald-200
+           text-xs font-medium px-3 py-1 rounded-full;
+  }
+
+  .pill-amber {
+    @apply bg-amber-50 text-amber-700 border border-amber-200
+           text-xs font-medium px-3 py-1 rounded-full;
+  }
+
+  .tab-btn {
+    @apply px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-200;
+  }
+
+  .tab-active {
+    @apply bg-blue-600 text-white shadow-md;
+  }
+
+  .tab-inactive {
+    @apply text-gray-500 hover:text-gray-800 hover:bg-gray-100;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
