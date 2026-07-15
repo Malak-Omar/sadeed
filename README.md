@@ -202,7 +202,3 @@ FastAPI · React · Tailwind CSS · Docker · Azure App Service
 ```
 
 ---
-
-## License
-
-MIT — free to use, modify, and deploy.
