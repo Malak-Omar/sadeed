@@ -184,6 +184,11 @@ if _static.exists():
         # Don't intercept API paths
         if full_path.startswith(("upload", "ranking", "chat", "reveal", "health")):
             raise HTTPException(404)
+        # Serve static files that exist (logo, favicon, etc.)
+        static_file = _static / full_path
+        if static_file.exists() and static_file.is_file():
+            return FileResponse(str(static_file))
+        # Fall back to SPA index
         index = _static / "index.html"
         if index.exists():
             return FileResponse(str(index))
